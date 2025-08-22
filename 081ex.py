@@ -1,19 +1,20 @@
 lista = []
 while True:
-    n = int(input('Digite um valor: '))
-    lista.append(n)
-    esc = input('Deseja continuar? [S/N] ').strip().upper()[0]
+    num = int(input('Digite um valor: '))
+    lista.append(num)
+    esc = str(input('Deseja continuar? [S/N]: ')).strip().upper()[0]
     while esc not in 'SN':
-        esc = input('Digite novamente [S/N] ').strip().upper()[0]
+        print('Opção Invalida, Tente novamente!')
+        esc = str(input('Deseja continuar? [S/N]: ')).strip().upper()[0]
     if esc == 'N':
         break
-print('-='*20)
-lista.sort(reverse=True)
-print(f'Você digitou {len(lista)} elementos.')
-print(f'A lista está organizada de forma  decrescente: {lista}')
+print(f'Foram digitados {len(lista)} Valores ao todo!')
 if 5 in lista:
-    print('O número 5 está presente na lista.')
+    print('O Número 5 está na lista!')
 else:
-    print('O número 5 não está presente na lista.')
+    print('O número 5 não está na lista.')
+lista.sort(reverse=True)
+print(f'A lista em forma descrecente: {lista}')
+
 
 

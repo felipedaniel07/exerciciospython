@@ -1,26 +1,19 @@
-num = []
-c = 0
+lista = []
 while True:
-    n = int(input(f'Digite {c+1}° valor: '))
-    if c == 0:
-        num.append(n)
-        print('Número adicionado com sucesso!')
+    num = int(input('Digite um valor: '))
+    if num in lista:
+        print('Valor Repetido,Tente Novamente!')
     else:
-        if n in num:
-            print('Número já existe na lista. Tente outro.')
-            continue
-        else:
-            num.append(n)
-            print('Número adicionado com sucesso!')
-    c += 1
-    opcao = str(input('Quer Continuar? [S/N] ')).strip().upper()[0]
-    while opcao not in 'NS':
-        print('OPÇÃO INVALIDA, TENTE NOVAMENTE!')
-        opcao = str(input('Quer Continuar? [S/N] ')).strip().upper()[0]
-    if opcao == 'N':
+        lista.append(num)
+        print('Valor adicionado com sucesso!')
+    escolha = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+    while escolha not in 'SN':
+        print('Opção Invalida, Tente Novamente!')
+        escolha = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+    if escolha == 'N':
         break
-    print()
-print(f'Os valores em ordem crescente são: {sorted(num)}')
+lista.sort()
+print(f'Todos os valores em ordem crescente: {lista}')
 
 
 

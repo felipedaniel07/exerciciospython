@@ -1,6 +1,6 @@
 s = pra = c = menor = nome = 0
 print('-'*30)
-print('  LOJA SUPERMARIO ATACADISTA')
+print('  LOJA SUPERMARIO ATACADISTA Jr')
 print('-'*30)
 while True:
     np = str(input('DIGITE O NOME DO PRODUTO: '))
